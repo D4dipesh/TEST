@@ -1,0 +1,28 @@
+﻿@using BOL
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<table>
+    @{
+
+        string name = "IACSD";
+        List<Doctor> docters = ViewData["doclist"] as List<Doctor>;
+
+        foreach (Doctor doc in docters)
+        {
+    <tr>
+        <td><i><b><u>@doc.Name</u></b></i></td>
+        <td><i><b><u>@doc.Hospital</u></b></i></td>
+        <td><i><b><u>@doc.Speciality</u></b></i></td>
+        <td><i><b><u>@doc.Fee</u></b></i>  </td>
+        <td><i><b><u>@doc.BirthDate</u></b></i></td>
+
+        <td>@Html.ActionLink("Delete", "Delete",new { @doc.userName})</td>
+        <td>@Html.ActionLink("Update", "Update", new { @doc.userName })</td>
+    </tr>
+}
+
+    }
+    </table>

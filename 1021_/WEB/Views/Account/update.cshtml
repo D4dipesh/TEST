@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "update";
+}
+
+<h2>update</h2>
+@model BOL.Doctor
+
+@using (Html.BeginForm())
+{
+    
+    
+    
+    <p>
+        <label>Name:</label>
+        <input name="name" value=@Model.Name/>
+    </p>
+
+    <p>
+        <label>Speciality:</label>
+        <input name="speciality" value=@Model.Speciality/>
+    </p>
+    <p>
+        <label>hospital:</label>
+        <input name="hospital" value=@Model.Hospital/>
+    </p>
+    <p>
+        <label>birth date:</label>
+        <input name="birthDate" value=@Model.BirthDate/>
+    </p>
+    <p>
+        <label>Fee:</label>
+        <input name="fee" type="number" value=@Model.Fee/>
+    </p>
+    <p>
+        <label>username:</label>
+        <input name="username" value=@Model.userName/>
+    </p>
+    <p>
+        <label>password:</label>
+        <input name="password" type="password" value=@Model.password/>
+    </p>
+    <input type="submit" value="Log in" />
+}

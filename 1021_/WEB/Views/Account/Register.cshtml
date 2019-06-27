@@ -1,0 +1,44 @@
+﻿
+@{
+    /**/
+
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <p>
+        <label>Name:</label>
+        <input name="name" />
+    </p>
+
+    <p>
+        <label>Speciality:</label>
+        <input name="speciality" />
+    </p>
+    <p>
+        <label>hospital:</label>
+        <input name="hospital" />
+    </p>
+    <p>
+        <label>birth date:</label>
+        <input name="birthDate" />
+    </p>
+    <p>
+        <label>Fee:</label>
+        <input name="fee" type="number" />
+    </p>
+    <p>
+        <label>username:</label>
+        <input name="username" />
+    </p>
+    <p>
+        <label>password:</label>
+        <input name="password" type="password" />
+    </p>
+    <input type="submit" value="Log in" />
+}
